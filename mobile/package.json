@@ -1,0 +1,10 @@
+{
+  "name": "starfruits-mobile",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "react": "18.2.0",
+    "react-native": "0.71.6",
+    "expo": "^49.0.0"
+  }
+}
