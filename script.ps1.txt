@@ -1,0 +1,28 @@
+# Se placer dans le dossier du projet
+cd "C:\Users\ludivine\APP-SF"
+
+# Initialisation de Git si ce n'est pas déjà fait
+if (!(Test-Path ".git")) {
+    git init
+}
+
+# Ajout de tous les fichiers
+git add .
+
+# Validation des fichiers (Commit)
+git commit -m "Ajout du backend, frontend, mobile et database"
+
+# Vérification de la branche
+$branch = git branch --show-current
+if ($branch -ne "main") {
+    git branch -M main
+}
+
+# Ajout de l'origine si non définie
+$remote = git remote -v
+if ($remote -eq $null) {
+    git remote add origin "https://github.com/TEAMSTARFRUITS/APP-SF.git"
+}
+
+# Push sur GitHub
+git push -u origin main
